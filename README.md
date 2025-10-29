@@ -36,3 +36,13 @@ Richiede **Python 3.12+**
 ```bash
 python -m pip install --upgrade pip
 pip install -r requirements.txt
+
+Le principali dipendenze includono:
+
+pikepdf → gestione PDF/A e file associati
+
+lxml → generazione CDA XML
+
+pyHanko → firma digitale PAdES
+
+requests → validazione EDS in mTLS
