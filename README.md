@@ -46,3 +46,60 @@ lxml → generazione CDA XML
 pyHanko → firma digitale PAdES
 
 requests → validazione EDS in mTLS
+
+▶️ Uso (esempio)
+
+Esecuzione del tool da riga di comando:
+
+python fse_tool.py ^
+  --pdf in/referto.pdf ^
+  --data in/referto.json ^
+  --out out/referto_signed.pdf ^
+  --cda-out out/referto_cda.xml ^
+  --sign-p12 secrets/cert.p12 ^
+  --sign-pass 123456 ^
+  --eds-url https://<gateway-preprod>/eds/validation ^
+  --mtls-cert secrets/client_cert.pem ^
+  --mtls-key secrets/client_key.pem ^
+  --ca secrets/gateway_ca.pem ^
+  --log out/referto_log.json
+
+
+Output generato:
+
+📄 out/referto_cda.xml → documento CDA R2 XML
+
+📑 out/referto_signed.pdf → PDF firmato PAdES con CDA allegato
+
+🧾 out/referto_log.json → log completo della validazione EDS
+
+🧾 Accreditamento FSE
+
+Modulo attualmente in fase di accreditamento nazionale presso SOGEI / Dipartimento per la Trasformazione Digitale
+nell’ambito dell’interoperabilità del Fascicolo Sanitario Elettronico 2.0.
+
+Software: WinPreGest
+Versione: 5.1_A08
+Tipologia documento: Referto di Specialistica Ambulatoriale (nota di consulto)
+Servizi oggetto di accreditamento: Validazione + Pubblicazione
+
+Società fornitrice:
+Pa.Ser Consulting Group della dott.ssa Pier Paola Lai
+📍 Via Salvatore Dau, 11 — 07100 Sassari (Italia)
+📧 paserconsulting@pec.it
+
+📄 P.IVA 02216530903 — C.F. LAIPPL71A44I452H
+
+Referente tecnico:
+👤 Sergio Busonera
+📧 sergio.busonera@paserconsulting.it
+
+📞 +39 347 3493596
+
+📄 Licenza
+
+Questo progetto è distribuito con licenza MIT.
+Consulta il file LICENSE per i dettagli.
+
+© 2025 – Pa.Ser Consulting Group della dott.ssa Pier Paola Lai
+Tutti i diritti riservati.
